@@ -1,4 +1,4 @@
-apiVersion: apps/v1    # instead of extensions/v1beta1 (previous 1.10 ?)
+apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   name: node-js-deploy
