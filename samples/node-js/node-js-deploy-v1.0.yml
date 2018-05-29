@@ -1,0 +1,23 @@
+       
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: node-js-deploy
+  labels:
+    app: node-js-deploy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: node-js-deploy
+  template:
+    metadata:
+      labels:
+        app: node-js-deploy
+    spec:
+      containers:
+      - name: node-js-deploy
+        image: jonbaier/pod-scaling:0.1
+        ports:
+        - containerPort: 80
+
